@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fernando Batayola — iOS 27 Liquid Glass Portfolio</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Linked to your css/style.css file -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Ambient Liquid Mesh Canvas -->
+  <div class="ambient-canvas">
+    <div class="liquid-blob blob-1"></div>
+    <div class="liquid-blob blob-2"></div>
+    <div class="liquid-blob blob-3"></div>
+  </div>
+  <div class="cursor-orb" id="cursorOrb"></div>
+  <div class="spatial-grid"></div>
+
+  <!-- iOS 27 Dynamic Island Navigation -->
+  <header class="dynamic-island-wrap">
+    <nav class="dynamic-island" aria-label="Primary Navigation">
+      <div class="island-status">
+        <span class="pulse-dot"></span>
+        <span>FB // iOS 27</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Spatial Hub</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#stack">Architecture</a></li>
+        <li><a href="#vision">Vision Board</a></li>
+        <li><a href="#contact">Connect</a></li>
+      </ul>
+      <div class="island-controls">
+        <button class="theme-dot active" style="background: #38bdf8;" data-theme-choice="default" title="Aurora Cyan"></button>
+        <button class="theme-dot" style="background: #c084fc;" data-theme-choice="violet" title="Cosmic Violet"></button>
+        <button class="theme-dot" style="background: #34d399;" data-theme-choice="emerald" title="Emerald Glass"></button>
+        <button class="theme-dot" style="background: #fbbf24;" data-theme-choice="gold" title="Solar Gold"></button>
+        <button class="sound-btn" id="soundToggle" title="Toggle Crystalline UI Audio">
+          <i data-lucide="volume-2" style="width: 15px; height: 15px;"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container" id="home">
+    <!-- Hero Spatial Bento -->
+    <section class="hero-grid">
+      <div class="liquid-glass hero-main tilt-card">
+        <div>
+          <div class="ios-badge">
+            <i data-lucide="sparkles" style="width: 14px; height: 14px;"></i>
+            <span>BSCS-4A • STI West Negros University • System Analyst & Game Dev</span>
+          </div>
+          <h1 class="hero-title">
+            Fernando <span class="liquid-chrome-text">Batayola</span>
+          </h1>
+          <p class="hero-subtitle">
+            Architecting immersive 3D educational worlds, finite state machine mechanics, and resilient full-stack systems. Blending meticulous database engineering with fluid interactive experiences.
+          </p>
+        </div>
+        <div class="hero-actions">
+          <a href="#projects" class="btn-liquid">
+            <span>Explore Spatial Works</span>
+            <i data-lucide="arrow-up-right" style="width: 18px; height: 18px;"></i>
+          </a>
+          <a href="#vision" class="btn-glass">
+            <i data-lucide="compass" style="width: 18px; height: 18px;"></i>
+            <span>Fernando's Vision Board</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Interactive 3D Liquid Prism Widget -->
+      <div class="liquid-glass hero-prism-card tilt-card" id="prismCard">
+        <div style="width: 100%; display: flex; justify-content: space-between; align-items: center;">
+          <span class="section-eyebrow" style="margin: 0;">Interactive Core</span>
+          <span class="glass-tag" id="prismModeBadge">Node 01 / 04</span>
+        </div>
+
+        <div class="prism-stage" id="prismTrigger" title="Click to cycle specialty nodes">
+          <div class="prism-ring"></div>
+          <div class="prism-orb">
+            <i data-lucide="cpu" id="prismIcon" style="width: 54px; height: 54px; color: #040711;"></i>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 12px;">
+          <h3 id="prismTitle" style="font-size: 1.25rem; font-weight: 800;">3D Open-World Game Dev</h3>
+          <p id="prismDesc" style="font-size: 0.84rem; color: var(--text-muted); margin-top: 4px;">
+            Unity • Unreal Engine • Low-Poly Floating Realms
+          </p>
+        </div>
+
+        <div class="prism-meta">
+          <span style="color: var(--text-muted);">Tap orb to morph focus</span>
+          <span style="color: var(--accent-primary); font-weight: 700;">Interactive ↻</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Telemetry Strip -->
+    <section class="telemetry-strip">
+      <div class="liquid-glass stat-pill tilt-card">
+        <div class="stat-icon"><i data-lucide="gamepad-2"></i></div>
+        <div class="stat-info">
+          <h4>CSFRONTIER</h4>
+          <p>3D Capstone Lead Analyst</p>
+        </div>
+      </div>
+      <div class="liquid-glass stat-pill tilt-card">
+        <div class="stat-icon"><i data-lucide="workflow"></i></div>
+        <div class="stat-info">
+          <h4>ERD & DFD</h4>
+          <p>System Schema Architect</p>
+        </div>
+      </div>
+      <div class="liquid-glass stat-pill tilt-card">
+        <div class="stat-icon"><i data-lucide="code-2"></i></div>
+        <div class="stat-info">
+          <h4>C# & Python</h4>
+          <p>Unity, Django & MySQL</p>
+        </div>
+      </div>
+      <div class="liquid-glass stat-pill tilt-card">
+        <div class="stat-icon"><i data-lucide="shield-check"></i></div>
+        <div class="stat-info">
+          <h4>NetSec Recon</h4>
+          <p>Footprinting & Diagnostics</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Case Studies -->
+    <section id="projects">
+      <div class="section-header">
+        <div>
+          <p class="section-eyebrow">Spatial Case Studies</p>
+          <h2 class="section-title">Engineered Worlds & Systems</h2>
+        </div>
+        <div class="filter-group">
+          <button class="filter-btn active" data-filter="all">All Systems</button>
+          <button class="filter-btn" data-filter="game">3D / 2D Games</button>
+          <button class="filter-btn" data-filter="web">Full-Stack Web</button>
+        </div>
+      </div>
+
+      <div class="projects-grid">
+        <!-- CSFRONTIER Capstone -->
+        <article class="liquid-glass project-card featured-wide tilt-card" data-category="game" data-project="csfrontier">
+          <div>
+            <div class="project-tag-row">
+              <span class="glass-tag">Unity 3D</span>
+              <span class="glass-tag">C#</span>
+              <span class="glass-tag">System Analysis (ERD / DFD)</span>
+              <span class="glass-tag">Blender Low-Poly</span>
+            </div>
+            <h3>CSFRONTIER — 3D Open-World Educational Game</h3>
+            <p>
+              Senior BSCS capstone project combining open-world exploration with interactive computer science pedagogy. Engineered full Entity Relationship Diagrams, Data Flow Diagrams, and floating island biomes featuring medieval wizard towers, Python castles, and hollowed giant trees.
+            </p>
+            <div class="project-footer">
+              <span>Inspect System Architecture & Schemas</span>
+              <i data-lucide="maximize-2" style="width: 18px; height: 18px;"></i>
+            </div>
+          </div>
+          <div class="project-visual">
+            <i data-lucide="castle" style="width: 58px; height: 58px; color: var(--accent-primary); margin-bottom: 12px;"></i>
+            <span style="font-weight: 800; font-size: 1.05rem;">Floating Island Arenas</span>
+            <span style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Wizard Towers • Python Castles • Hollowed Trees</span>
+          </div>
+        </article>
+
+        <!-- Cave FSM Puzzle -->
+        <article class="liquid-glass project-card tilt-card" data-category="game" data-project="cavefsm">
+          <div>
+            <div class="project-tag-row">
+              <span class="glass-tag">Unity 3D</span>
+              <span class="glass-tag">C# Scripting</span>
+              <span class="glass-tag">Finite State Machines</span>
+            </div>
+            <h3>3D Cave FSM Puzzle Environment</h3>
+            <p>
+              Interactive subterranean puzzle system driven by deterministic Finite State Machines. Built modular C# state controllers including <code>CaveFSM</code>, <code>RuneTrigger</code>, <code>OreTrap</code>, and a centralized <code>GameManager</code>.
+            </p>
+          </div>
+          <div class="project-footer">
+            <span>Inspect State Machine Logic</span>
+            <i data-lucide="arrow-up-right" style="width: 18px; height: 18px;"></i>
+          </div>
+        </article>
+
+        <!-- Morph Dash -->
+        <article class="liquid-glass project-card tilt-card" data-category="game" data-project="morphdash">
+          <div>
+            <div class="project-tag-row">
+              <span class="glass-tag">2D Game Jam</span>
+              <span class="glass-tag">Unity / C#</span>
+              <span class="glass-tag">itch.io Release</span>
+            </div>
+            <h3>Morph Dash — Scale-Shifting Platformer</h3>
+            <p>
+              Fast-paced 2D academic game jam title published on itch.io built around dynamic growing and shrinking physics mechanics, custom collision states, and rapid level iteration.
+            </p>
+          </div>
+          <div class="project-footer">
+            <span>Inspect Game Jam Postmortem</span>
+            <i data-lucide="arrow-up-right" style="width: 18px; height: 18px;"></i>
+          </div>
+        </article>
+
+        <!-- Velocity Elite Rentals -->
+        <article class="liquid-glass project-card featured-wide tilt-card" data-category="web" data-project="velocity">
+          <div>
+            <div class="project-tag-row">
+              <span class="glass-tag">Django</span>
+              <span class="glass-tag">Python</span>
+              <span class="glass-tag">PHP & MySQL (XAMPP)</span>
+              <span class="glass-tag">Git / GitHub</span>
+            </div>
+            <h3>Velocity Elite Rentals — Fleet & Booking Platform</h3>
+            <p>
+              Full-stack vehicle rental management web application powered by Django views and relational MySQL databases. Features real-time fleet availability tracking, automated booking workflows, and administrative dashboards.
+            </p>
+            <div class="project-footer">
+              <span>Inspect Database & Backend Flow</span>
+              <i data-lucide="database" style="width: 18px; height: 18px;"></i>
+            </div>
+          </div>
+          <div class="project-visual">
+            <i data-lucide="car-front" style="width: 58px; height: 58px; color: var(--accent-tertiary); margin-bottom: 12px;"></i>
+            <span style="font-weight: 800; font-size: 1.05rem;">Relational Fleet Core</span>
+            <span style="font-size: 0.8rem; color: var(--text-muted); margin-top: 4px;">Django Views • MySQL Schema • Git Workflow</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Architecture & Technical Stack -->
+    <section id="stack">
+      <div class="section-header">
+        <div>
+          <p class="section-eyebrow">System Capabilities</p>
+          <h2 class="section-title">Technical Architecture Matrix</h2>
+        </div>
+      </div>
+
+      <div class="skills-bento">
+        <div class="liquid-glass skill-panel tilt-card">
+          <div class="skill-panel-header">
+            <div class="stat-icon"><i data-lucide="box"></i></div>
+            <h3>Game Engines & 3D Craft</h3>
+          </div>
+          <div class="chip-cloud">
+            <span class="skill-chip">Unity 3D / 2D</span>
+            <span class="skill-chip">Unreal Engine</span>
+            <span class="skill-chip">C# Gameplay Scripting</span>
+            <span class="skill-chip">Blender Low-Poly</span>
+            <span class="skill-chip">Finite State Machines</span>
+            <span class="skill-chip">Floating Island Level Design</span>
+          </div>
+        </div>
+
+        <div class="liquid-glass skill-panel tilt-card">
+          <div class="skill-panel-header">
+            <div class="stat-icon"><i data-lucide="layers"></i></div>
+            <h3>Full-Stack & System Analysis</h3>
+          </div>
+          <div class="chip-cloud">
+            <span class="skill-chip">Python & Django</span>
+            <span class="skill-chip">PHP & MySQL (XAMPP)</span>
+            <span class="skill-chip">HTML5 / CSS3 / JS</span>
+            <span class="skill-chip">ERD & DFD Modeling</span>
+            <span class="skill-chip">Git & GitHub</span>
+            <span class="skill-chip">VS Code & Antigravity IDE</span>
+          </div>
+        </div>
+
+        <div class="liquid-glass skill-panel tilt-card">
+          <div class="skill-panel-header">
+            <div class="stat-icon"><i data-lucide="radar"></i></div>
+            <h3>Network Recon & Strategy</h3>
+          </div>
+          <div class="chip-cloud">
+            <span class="skill-chip">ipconfig & netstat</span>
+            <span class="skill-chip">WHOIS & DNSDumpster</span>
+            <span class="skill-chip">Netcraft Footprinting</span>
+            <span class="skill-chip">System Evaluation</span>
+            <span class="skill-chip">ZZZ Hypercarry & Disorder Theorycrafting</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fernando's Vision Board -->
+    <section id="vision">
+      <div class="section-header">
+        <div>
+          <p class="section-eyebrow">Future Horizon</p>
+          <h2 class="section-title">Fernando's Vision Board</h2>
+        </div>
+      </div>
+
+      <div class="vision-grid">
+        <div class="liquid-glass vision-card tilt-card">
+          <div>
+            <div class="vision-coords">MILESTONE 01 // SOFTWARE & GAME ARCHITECT</div>
+            <h3>Lead Systems & Game Engineer</h3>
+            <p>
+              Bridging rigorous system analysis with expressive 3D world-building—shipping polished indie titles and scalable full-stack platforms from concept schema to global release.
+            </p>
+          </div>
+          <div class="project-footer">
+            <span>Workplace Readiness Trajectory</span>
+            <i data-lucide="rocket" style="width: 18px; height: 18px;"></i>
+          </div>
+        </div>
+
+        <div class="liquid-glass vision-card tilt-card">
+          <div>
+            <div class="vision-coords">DESTINATION 02 // 45.4642° N, 9.1900° E</div>
+            <h3>Northern Italy Expedition</h3>
+            <p>
+              Experiencing Renaissance architecture, alpine lakes, and timeless structural design across Northern Italy to inspire next-generation 3D environmental storytelling.
+            </p>
+          </div>
+          <div class="project-footer">
+            <span>Global Inspiration Node</span>
+            <i data-lucide="plane" style="width: 18px; height: 18px;"></i>
+          </div>
+        </div>
+
+        <div class="liquid-glass vision-card tilt-card">
+          <div>
+            <div class="vision-coords">DESTINATION 03 // 42.3601° N, 71.0589° W</div>
+            <h3>Massachusetts Innovation Hub</h3>
+            <p>
+              Exploring world-renowned computer science ecosystems, historic coastal towns, and cutting-edge software engineering communities on the US East Coast.
+            </p>
+          </div>
+          <div class="project-footer">
+            <span>Tech & Cultural Horizon</span>
+            <i data-lucide="globe" style="width: 18px; height: 18px;"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Spatial Dock -->
+    <section id="contact">
+      <div class="liquid-glass contact-card">
+        <div>
+          <p class="section-eyebrow">Direct Transmission</p>
+          <h2 class="section-title" style="margin-bottom: 14px;">Initiate Collaboration</h2>
+          <p style="color: var(--text-muted); line-height: 1.65; margin-bottom: 28px;">
+            Available for game development roles, system analysis consulting, and full-stack software engineering opportunities.
+          </p>
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <div class="stat-icon" style="width: 40px; height: 40px;"><i data-lucide="graduation-cap" style="width: 18px;"></i></div>
+              <span>BSCS-4A • STI West Negros University</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 12px;">
+              <div class="stat-icon" style="width: 40px; height: 40px;"><i data-lucide="terminal" style="width: 18px;"></i></div>
+              <span>System Analyst & Unity / Django Developer</span>
+            </div>
+          </div>
+        </div>
+
+        <form id="contactForm">
+          <div class="glass-input-group">
+            <label for="senderName">Your Name / Studio</label>
+            <input type="text" id="senderName" class="glass-input" placeholder="e.g. Studio Lead / Recruiter" required />
+          </div>
+          <div class="glass-input-group">
+            <label for="senderEmail">Return Frequency (Email)</label>
+            <input type="email" id="senderEmail" class="glass-input" placeholder="hello@studio.dev" required />
+          </div>
+          <div class="glass-input-group">
+            <label for="senderMsg">Transmission Payload</label>
+            <textarea id="senderMsg" rows="3" class="glass-input" placeholder="Let's build a 3D world or full-stack platform together..." required></textarea>
+          </div>
+          <button type="submit" class="btn-liquid" style="width: 100%; justify-content: center;">
+            <span>Send Spatial Ping</span>
+            <i data-lucide="send" style="width: 16px; height: 16px;"></i>
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p>Crafted with iOS 27 Liquid Glass Physics • Fernando Batayola © 2026</p>
+    </footer>
+  </main>
+
+  <!-- iOS 27 Glass Sheet Modal -->
+  <div class="modal-backdrop" id="projectModal" aria-hidden="true">
+    <div class="liquid-glass ios-sheet">
+      <div class="sheet-handle"></div>
+      <div class="project-tag-row" id="modalTags"></div>
+      <h2 id="modalTitle" style="font-size: 1.75rem; font-weight: 800; margin-bottom: 10px;"></h2>
+      <p id="modalSummary" style="color: var(--text-muted); line-height: 1.65;"></p>
+      <ul class="architecture-list" id="modalBullets"></ul>
+      <div style="display: flex; justify-content: flex-end; gap: 12px;">
+        <button class="btn-liquid" id="closeModalBtn">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Linked to your js/main.js file -->
+  <script src="js/main.js"></script>
+</body>
+</html>
